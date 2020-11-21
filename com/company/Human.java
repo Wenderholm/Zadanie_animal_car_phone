@@ -6,5 +6,5 @@ public class Human {
     String city;
     Double idNumber;
     private Double salary;
-    public Animal pet;
+    public Car auto;
 }

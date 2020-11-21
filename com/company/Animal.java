@@ -1,12 +1,17 @@
 package com.company;
 
 public class Animal {
-    final String species = "dog";
+//    final String species = "dog";
+    final String species;
     String name;
     String race;
     private Double weight = 15.0;
 
-//
+    public Animal(String species) {
+        this.species = species;
+    }
+
+    //
     Double getWeight() {
         return weight;
     }
