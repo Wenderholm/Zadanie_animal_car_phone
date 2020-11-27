@@ -1,10 +1,10 @@
-package com.company;
+package com.company.devices;
 
 public class Car {
     final public String model;
     final public String producer;
     final public Double age;
-    Double value;
+    public Double value;
 
 
     public Car(String model, String producer, Double age, Double value) {
@@ -14,6 +14,6 @@ public class Car {
         this.value = value;
     }
     public String toString(){
-
+        return this.model + " " + this.producer + " " + this.age + " jego cena wynosi " + this.value ;
     }
 }

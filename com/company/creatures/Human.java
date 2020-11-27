@@ -1,4 +1,6 @@
-package com.company;
+package com.company.creatures;
+import com.company.devices.Car;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 

@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.creatures.Human;
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,5 +31,8 @@ public class Main {
         Car opel = new Car("astra", "opel",12.0,7500.0);
         ja.setCar(opel);
         System.out.println(ja.getCar());
+        Phone nokia = new Phone("nokia","aaaa");
+        nokia.screenSize = 360.00;
+        System.out.println(nokia);
     }
 }
