@@ -15,6 +15,9 @@ public class Animal {
     Double getWeight() {
         return weight;
     }
+    void setWeight(Double newWeight){
+        this.weight = newWeight;
+    }
 
     void feed(Double foodWeight){
         if (weight <= 0){
