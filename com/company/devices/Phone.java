@@ -16,4 +16,7 @@ public class Phone extends Device {
                 ", producer='" + producer + '\'' +
                 '}';
     }
+//    public String toString(){
+//        return producer+" "+model+" "+screenSize;
+//    }
 }
