@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Device {
+public abstract class Device  {
     final public String model;
     final public String producer;
 
@@ -8,5 +8,5 @@ public class Device {
         this.model = model;
         this.producer = producer;
     }
-
+    public abstract void turnOn();
 }

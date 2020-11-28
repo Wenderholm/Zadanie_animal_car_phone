@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Car extends Device {
+public class Car extends Device implements Saleable {
 
     final public Double age;
     public Double value;
@@ -20,5 +20,23 @@ public class Car extends Device {
                 ", model='" + model + '\'' +
                 ", producer='" + producer + '\'' +
                 '}';
+    }
+    @Override
+    public void turnOn() {
+        System.out.println("key turned");
+        System.out.println("not working");
+        System.out.println("key turned");
+        System.out.println("not working");
+        System.out.println("key turned");
+        System.out.println("engine started");
+    }
+    @Override
+    public void sell() {
+        System.out.println("sprzedano (walnięcie młotkiem)");
+    }
+
+    @Override
+    public void sellOnCredit() {
+        System.out.println("sprzedano (bank się cieszy)");
     }
 }

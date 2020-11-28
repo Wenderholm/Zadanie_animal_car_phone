@@ -16,7 +16,21 @@ public class Phone extends Device {
                 ", producer='" + producer + '\'' +
                 '}';
     }
+    //    inny sposób zapisywania toString
 //    public String toString(){
 //        return producer+" "+model+" "+screenSize;
 //    }
+
+//ta czesc jest uzywana do abstract w class Device
+    @Override
+    public void turnOn() {
+        System.out.println("you pushed the button");
+        System.out.println("black screen");
+        System.out.println("black screen");
+        System.out.println("black screen");
+        System.out.println("beeep");
+        System.out.println("helou");
+        System.out.println("producer logo");
+    }
+
 }
