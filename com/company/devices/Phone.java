@@ -1,15 +1,11 @@
 package com.company.devices;
 
-public class Phone {
-    final public String producer;
-    final public String model;
-    public Double screenSize;
+public class Phone extends Device {
+    public final Double screenSize;
 
-    public Phone(String producer, String model) {
-        this.producer = producer;
-        this.model = model;
+    public Phone(String producer, String model, Double screenSize) {
+        super(producer, model);
+        this.screenSize = screenSize;
     }
-    public String toString(){
-        return this.producer + " " + this.model + " " + screenSize;
-    }
+
 }

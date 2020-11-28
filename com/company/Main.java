@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
@@ -27,12 +28,19 @@ public class Main {
 //        System.out.println(ja.getSalary());
 //        ja.setSalary(30000.0);
 //        System.out.println(ja.getSalary());
-        ja.setSalary(5000.0);
-        Car opel = new Car("astra", "opel",12.0,7500.0);
-        ja.setCar(opel);
-        System.out.println(ja.getCar());
-        Phone nokia = new Phone("nokia","aaaa");
-        nokia.screenSize = 360.00;
+//        ja.setSalary(5000.0);
+//        Car opel = new Car("astra", "opel",12.0,7500.0);
+//        ja.setCar(opel);
+//        System.out.println(ja.getCar());
+//        Phone nokia = new Phone("nokia","aaaa");
+//        nokia.screenSize = 360.00;
+//        System.out.println(nokia);
+//        System.out.println(ja instanceof Human);
+//        System.out.println(ja instanceof Animal);
+        Phone nokia = new Phone("nokia", "stara", 1.0);
+        Car opel = new Car("corsa","opel",20.0,5500.0);
+
         System.out.println(nokia);
+//        System.out.println(opel);
     }
 }

@@ -5,13 +5,22 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class Human {
+public class Human extends Animal {
     String firstName;
     String lastName;
     String city;
     Double idNumber;
     private Double salary;
     private Car car;
+
+//    public Human(String species) {
+//        super(species);
+//    }
+//    odniesienie do final String species
+
+    public Human() {
+        super("homo sapiens");
+    }
 
 
     public Double getSalary() {
