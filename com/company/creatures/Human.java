@@ -1,27 +1,32 @@
 package com.company.creatures;
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
 public class Human extends Animal {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     String city;
     Double idNumber;
     private Double salary;
+    public Phone phone;
     private Car car;
-
+    private Double cash;
 //    public Human(String species) {
 //        super(species);
 //    }
 //    odniesienie do final String species
 
-    public Human() {
+    public Human(String firstName, String lastName) {
         super("homo sapiens");
+        this.cash = 0.0;
+        this.salary = 0.0;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-
 
     public Double getSalary() {
         DateTimeFormatter wtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -59,6 +64,19 @@ public class Human extends Animal {
 
     public Car getCar() {
         return car;
+    }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        if (cash != null) {
+            this.cash = cash;
+        } else {
+            System.out.println("nie można mieć nieznaną liczbę gotówki");
+        }
+
     }
 }
 

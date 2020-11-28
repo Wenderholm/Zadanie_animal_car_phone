@@ -1,7 +1,8 @@
 package com.company.devices;
 
-public interface Saleable {
-    void sell();
+import com.company.creatures.Human;
 
-    void sellOnCredit();
+public interface Saleable {
+    void sell(Human seller, Human buyer, Double price) throws Exception;
+
 }

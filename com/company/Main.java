@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
@@ -17,7 +16,9 @@ public class Main {
 //
 //
 
-        Human ja = new Human();
+        Human ja = new Human("przemek","wenderholm");
+        Human brother = new Human("paweł","wenderholm");
+        brother.setCash(5000.0);
 //        ja.firstName = "Przemek";
 //        ja.lastName = "wenderholm";
 //       wczytanie danych do human zeby nie bylo puste
@@ -37,11 +38,21 @@ public class Main {
 //        System.out.println(nokia);
 //        System.out.println(ja instanceof Human);
 //        System.out.println(ja instanceof Animal);
+
+
+
         Phone nokia = new Phone("nokia", "stara", 1.0);
         Car opel = new Car("corsa","opel",20.0,5500.0);
-        opel.sell();
-        System.out.println(opel);
-        System.out.println(nokia);
+//        opel.sell();
 //        System.out.println(opel);
+//        System.out.println(nokia);
+//        System.out.println(opel);
+        try {
+            nokia.sell(ja, brother, 50.0);
+        } catch (Exception e) {
+            System.out.println("sorry, nie udało się sprzedać");
+            System.out.println(e.getMessage());
+        }
+        System.out.println("dalsza logika");
     }
 }

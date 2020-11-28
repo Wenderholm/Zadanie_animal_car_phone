@@ -1,6 +1,8 @@
 package com.company.devices;
 
-public class Phone extends Device {
+import com.company.creatures.Human;
+
+public class Phone extends Device implements Saleable {
     public final Double screenSize;
 
     public Phone(String producer, String model, Double screenSize) {
@@ -33,4 +35,24 @@ public class Phone extends Device {
         System.out.println("producer logo");
     }
 
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.getCash() == null || buyer.getCash() == null) {
+            throw new Exception("Musisz zdefiniować stan portfela ");
+        }
+        if (seller.phone == null) {
+            System.out.println("Sorry nie masz telefonu");
+            throw new Exception("Brak telefonu");
+        }
+        if (buyer.getCash() < price){
+            System.out.println("sorry nie masz kasy");
+            throw new Exception("brak pieniędzy");
+        }
+        buyer.setCash(buyer.getCash() - price);
+        seller.setCash(seller.getCash() + price);
+        buyer.phone = seller.phone;
+        seller.phone = null;
+        System.out.println("telefon sprzedano za " + price + " od " + seller.firstName + " do " + buyer.firstName);
+    }
 }
