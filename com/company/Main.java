@@ -39,7 +39,7 @@ public class Main {
 //        System.out.println(ja instanceof Animal);
         Phone nokia = new Phone("nokia", "stara", 1.0);
         Car opel = new Car("corsa","opel",20.0,5500.0);
-
+        System.out.println(opel);
         System.out.println(nokia);
 //        System.out.println(opel);
     }

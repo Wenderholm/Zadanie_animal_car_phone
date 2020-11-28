@@ -8,4 +8,12 @@ public class Phone extends Device {
         this.screenSize = screenSize;
     }
 
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "screenSize=" + screenSize +
+                ", model='" + model + '\'' +
+                ", producer='" + producer + '\'' +
+                '}';
+    }
 }

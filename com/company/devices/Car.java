@@ -12,4 +12,13 @@ public class Car extends Device {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "age=" + age +
+                ", value=" + value +
+                ", model='" + model + '\'' +
+                ", producer='" + producer + '\'' +
+                '}';
+    }
 }
