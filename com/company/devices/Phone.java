@@ -5,8 +5,8 @@ import com.company.creatures.Human;
 public class Phone extends Device implements Saleable {
     public final Double screenSize;
 
-    public Phone(String producer, String model, Double screenSize) {
-        super(producer, model);
+    public Phone(String model, String producer, Double screenSize) {
+        super(model, producer);
         this.screenSize = screenSize;
     }
 
@@ -18,10 +18,7 @@ public class Phone extends Device implements Saleable {
                 ", producer='" + producer + '\'' +
                 '}';
     }
-    //    inny sposób zapisywania toString
-//    public String toString(){
-//        return producer+" "+model+" "+screenSize;
-//    }
+
 
 //ta czesc jest uzywana do abstract w class Device
     @Override
@@ -30,8 +27,8 @@ public class Phone extends Device implements Saleable {
         System.out.println("black screen");
         System.out.println("black screen");
         System.out.println("black screen");
-        System.out.println("beeep");
-        System.out.println("helou");
+        System.out.println("signal");
+        System.out.println("hello");
         System.out.println("producer logo");
     }
 

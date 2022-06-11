@@ -30,13 +30,4 @@ public class Car extends Device {
         System.out.println("key turned");
         System.out.println("engine started");
     }
-//    @Override
-//    public void sell() {
-//        System.out.println("sprzedano (walnięcie młotkiem)");
-//    }
-//
-//    @Override
-//    public void sellOnCredit() {
-//        System.out.println("sprzedano (bank się cieszy)");
-//    }
 }

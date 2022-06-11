@@ -1,7 +1,6 @@
 package com.company.creatures;
 
 public class Animal {
-//    final String species = "dog";
     final String species;
     String name;
     String race;
@@ -11,15 +10,24 @@ public class Animal {
         this.species = species;
     }
 
+    public Animal(String species, String name, String race) {
+        this.species = species;
+        this.name = name;
+        this.race = race;
+    }
+
     //
-    Double getWeight() {
+
+
+    public Double getWeight() {
         return weight;
     }
+
     void setWeight(Double newWeight){
         this.weight = newWeight;
     }
 
-    void feed(Double foodWeight){
+    public void feed(Double foodWeight){
         if (weight <= 0){
             System.out.println("to late - animal is dead");
         } else{
@@ -28,12 +36,16 @@ public class Animal {
         }
     }
 
-    void takeForAWalk(Double foodWeight) {
+    public void takeForAWalk(Double foodWeight) {
         if (weight <= 0) {
             System.out.println("to late - animal is dead");
         } else {
+            if((weight -= foodWeight)<0){
+                System.out.println("My weight is under 0. I dead");
+            }else{
             weight -= foodWeight;
             System.out.println("I am tired but My weight is now " + weight);
+            }
         }
 }
 }

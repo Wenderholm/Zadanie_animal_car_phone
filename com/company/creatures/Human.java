@@ -1,7 +1,6 @@
 package com.company.creatures;
-import com.company.devices.Car;
 import com.company.devices.Phone;
-
+import com.company.devices.Car;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -9,16 +8,10 @@ import java.time.format.DateTimeFormatter;
 public class Human extends Animal {
     public String firstName;
     public String lastName;
-    String city;
-    Double idNumber;
     private Double salary;
     public Phone phone;
     private Car car;
     private Double cash;
-//    public Human(String species) {
-//        super(species);
-//    }
-//    odniesienie do final String species
 
     public Human(String firstName, String lastName) {
         super("homo sapiens");
@@ -27,6 +20,8 @@ public class Human extends Animal {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+//    pobieranie i dodawnie wypłaty dla człowieka
 
     public Double getSalary() {
         DateTimeFormatter wtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -47,13 +42,20 @@ public class Human extends Animal {
     }
 
 
+    public void setPhone(Phone phone){
+        this.phone = phone;
+    }
 
+    public Phone getPhone() {
+        return phone;
+    }
 
     public void setCar(Car car) {
-        if(this.salary> car.value){
-            System.out.println("GRATULUJE");
+        if(this.cash> car.value){
+            System.out.println("GRATULUJE kupiłeś auto za " + car.value + " zł");
             this.car = car;
-        }else if(this.salary > car.value/12.0){
+            this.cash -= car.value;
+        }else if(this.cash > car.value/12.0){
             System.out.println("kupiłes auto na raty");
             this.car = car;
         } else {

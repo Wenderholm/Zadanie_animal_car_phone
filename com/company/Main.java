@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
@@ -7,46 +8,19 @@ import com.company.devices.Phone;
 public class Main {
 
     public static void main(String[] args) {
-//        Animal dog = new Animal("dog");
-//        dog.name = "azor";
-////        do wartości private z klasy Animal
-//        System.out.println("początkowa waga psa " + dog.getWeight());
-//        System.out.println(dog.name);
-//
-//
-//
 
+        Car opel = new Car("corsa","opel",20.0,500.0);
+
+// dodanie dwóch osób
         Human ja = new Human("przemek","wenderholm");
         Human brother = new Human("paweł","wenderholm");
+//        ustawienie 5000 zł dla brata
         brother.setCash(5000.0);
-//        ja.firstName = "Przemek";
-//        ja.lastName = "wenderholm";
-//       wczytanie danych do human zeby nie bylo puste
-//        ja.auto = mercedes;
-//        System.out.println(ja.auto.model);
-//        System.out.println("moje imie to " + ja.firstName + " moje nazwisko to " + ja.lastName + " posiadam pojazd " + ja.auto.producer);
-
-//        System.out.println(ja.getSalary());
-//        ja.setSalary(30000.0);
-//        System.out.println(ja.getSalary());
-//        ja.setSalary(5000.0);
-//        Car opel = new Car("astra", "opel",12.0,7500.0);
-//        ja.setCar(opel);
-//        System.out.println(ja.getCar());
-//        Phone nokia = new Phone("nokia","aaaa");
-//        nokia.screenSize = 360.00;
-//        System.out.println(nokia);
-//        System.out.println(ja instanceof Human);
-//        System.out.println(ja instanceof Animal);
-
-
-
+//        stworzenie telefonu
         Phone nokia = new Phone("nokia", "stara", 1.0);
-        Car opel = new Car("corsa","opel",20.0,5500.0);
-//        opel.sell();
-//        System.out.println(opel);
-//        System.out.println(nokia);
-//        System.out.println(opel);
+//        dodanie telefonu nokia do ja
+        ja.setPhone(nokia);
+
         try {
             nokia.sell(ja, brother, 50.0);
         } catch (Exception e) {
@@ -54,5 +28,32 @@ public class Main {
             System.out.println(e.getMessage());
         }
         System.out.println("dalsza logika");
+
+//      WYKORZYSTANIE KLASY ABSTRAKCYJNEJ
+        nokia.turnOn();
+        opel.turnOn();
+//      sprawdzenie opisu wyplaty z czasem
+        ja.getSalary();
+
+//        sprawdzenie stanu konta
+        System.out.println("Tyle posiada pieniędzy: "+ja.getCash());
+// sprawdzenie czy mogę kupić za drogie auto opla
+        ja.setCar(opel);
+//        ustawienie pieniędzy uzytkownikowi
+        ja.setCash(1000.0);
+        System.out.println("Tyle posiada pieniędzy: " + ja.getCash());
+        ja.setCar(opel);
+        System.out.println("Tyle posiada pieniędzy: " + ja.getCash());
+
+        System.out.println("********   Karmienie psa ******");
+        Animal pies = new Animal("dog","azor","czworonogi");
+        System.out.println(pies.getWeight());
+        pies.feed(10.0);
+        System.out.println(pies.getWeight());
+        pies.takeForAWalk(5.0);
+        System.out.println(pies.getWeight());
+        pies.takeForAWalk(21.0);
     }
+
+
 }
